@@ -28,6 +28,27 @@
   --bg-main: #fdf2f4;
   --bg-card: #ffffff;
   --border-color: #f4a9b8;
+  --bg-code: #fce7eb;
+  --shadow-card: rgba(236, 122, 148, 0.1);
+}
+
+/* 深色模式 */
+.dark-mode {
+  --pink-50: #2a1a1f;
+  --pink-100: #3d2430;
+  --pink-200: #5a3545;
+  --pink-300: #c27e8e;
+  --pink-400: #e08a9c;
+  --pink-500: #f09dae;
+  --pink-600: #f5b0c0;
+  --text-primary: #e8d5db;
+  --text-secondary: #c4a6b0;
+  --text-light: #a07f8a;
+  --bg-main: #1a1014;
+  --bg-card: #26181e;
+  --border-color: #5a3545;
+  --bg-code: #3d2430;
+  --shadow-card: rgba(236, 122, 148, 0.05);
 }
 
 body {
@@ -122,6 +143,25 @@ a:hover {
   color: var(--pink-500);
 }
 
+/* 深色模式切换按钮 */
+.dark-toggle {
+  background: none;
+  border: 1px solid var(--pink-200);
+  border-radius: 20px;
+  padding: 3px 12px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  color: var(--text-secondary);
+  transition: background 0.2s, color 0.2s;
+  line-height: 1.6;
+}
+
+.dark-toggle:hover {
+  background: var(--pink-100);
+  color: var(--pink-500);
+}
+
 /* 主内容区 */
 .container {
   max-width: 960px;
@@ -188,7 +228,7 @@ a:hover {
 
 .post-card:hover {
   border-color: var(--pink-300);
-  box-shadow: 0 2px 12px rgba(236, 122, 148, 0.1);
+  box-shadow: 0 2px 12px var(--shadow-card);
 }
 
 .post-card h3 {
@@ -264,12 +304,12 @@ a:hover {
   padding: 0.5rem 1.2rem;
   margin: 1.5rem 0;
   color: var(--text-secondary);
-  background: var(--pink-50);
+  background: var(--bg-code);
   border-radius: 0 4px 4px 0;
 }
 
 .article-content code {
-  background: var(--pink-100);
+  background: var(--bg-code);
   padding: 2px 6px;
   border-radius: 3px;
   font-size: 0.9em;
@@ -352,7 +392,7 @@ a:hover {
   display: inline-block;
   padding: 4px 14px;
   background: var(--pink-100);
-  color: var(--pink-600);
+  color: var(--pink-500);
   border-radius: 20px;
   font-size: 0.85rem;
   font-family: -apple-system, 'Segoe UI', sans-serif;
@@ -382,6 +422,37 @@ a:hover {
   justify-content: center;
   gap: 1.5rem;
   margin-bottom: 0.8rem;
+}
+
+.friend-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.friend-links a {
+  color: var(--text-light);
+  font-size: 0.85rem;
+}
+
+.friend-links a:hover {
+  color: var(--pink-400);
+}
+
+.friend-title {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-bottom: 0.4rem;
+  opacity: 0.7;
+}
+
+.site-days {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 0.4rem;
+  opacity: 0.8;
 }
 
 /* 响应式 */
