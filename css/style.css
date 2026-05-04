@@ -34,9 +34,9 @@
 
 /* 深色模式 */
 .dark-mode {
-  --pink-50: #2a1a1f;
-  --pink-100: #3d2430;
-  --pink-200: #5a3545;
+  --pink-50: #111111;
+  --pink-100: #1a1a1a;
+  --pink-200: #2a2a2a;
   --pink-300: #c27e8e;
   --pink-400: #e08a9c;
   --pink-500: #f09dae;
@@ -44,11 +44,11 @@
   --text-primary: #e8d5db;
   --text-secondary: #c4a6b0;
   --text-light: #a07f8a;
-  --bg-main: #1a1014;
-  --bg-card: #26181e;
-  --border-color: #5a3545;
-  --bg-code: #3d2430;
-  --shadow-card: rgba(236, 122, 148, 0.05);
+  --bg-main: #000000;
+  --bg-card: #111111;
+  --border-color: #2a2a2a;
+  --bg-code: #1a1a1a;
+  --shadow-card: rgba(0, 0, 0, 0.3);
 }
 
 body {
