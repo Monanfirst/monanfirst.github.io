@@ -1,0 +1,384 @@
+/* 基础重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pink-50: #fdf2f4;
+  --pink-100: #fce7eb;
+  --pink-200: #f9d0d9;
+  --pink-300: #f4a9b8;
+  --pink-400: #ec7a94;
+  --pink-500: #df4d74;
+  --pink-600: #cc2a5e;
+  --text-primary: #3d2c33;
+  --text-secondary: #7a636b;
+  --text-light: #a89099;
+  --bg-main: #fdf2f4;
+  --bg-card: #ffffff;
+  --border-color: #f4a9b8;
+}
+
+body {
+  font-family: 'Georgia', 'Noto Serif SC', serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.8;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--pink-500);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--pink-600);
+}
+
+/* 导航栏 */
+.navbar {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.navbar-brand {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.navbar-brand:hover {
+  color: var(--pink-500);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navbar-links a {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--pink-400);
+  transition: width 0.25s;
+}
+
+.navbar-links a:hover::after,
+.navbar-links a.active::after {
+  width: 100%;
+}
+
+.navbar-links a.active {
+  color: var(--pink-500);
+}
+
+/* 主内容区 */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* 首页 Hero */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem 3rem;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 520px;
+  margin: 0 auto 2rem;
+}
+
+.hero-line {
+  width: 40px;
+  height: 2px;
+  background: var(--pink-300);
+  margin: 0 auto 1.5rem;
+}
+
+/* 文章卡片 */
+.section-title {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--pink-200);
+}
+
+.post-card {
+  background: var(--bg-card);
+  border: 1px solid var(--pink-200);
+  border-radius: 6px;
+  padding: 1.5rem 1.8rem;
+  margin-bottom: 1.2rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.post-card:hover {
+  border-color: var(--pink-300);
+  box-shadow: 0 2px 12px rgba(236, 122, 148, 0.1);
+}
+
+.post-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+
+.post-card h3 a {
+  color: var(--text-primary);
+}
+
+.post-card h3 a:hover {
+  color: var(--pink-500);
+}
+
+.post-meta {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  margin-bottom: 0.6rem;
+}
+
+.post-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.88rem;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  color: var(--pink-400);
+}
+
+/* 文章详情页 */
+.article-header {
+  padding: 3rem 0 2rem;
+  border-bottom: 1px solid var(--pink-200);
+  margin-bottom: 2rem;
+}
+
+.article-header h1 {
+  font-size: 1.9rem;
+  font-weight: normal;
+  margin-bottom: 0.6rem;
+}
+
+.article-content {
+  max-width: 680px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+.article-content h2 {
+  font-size: 1.35rem;
+  margin: 2rem 0 0.8rem;
+  font-weight: normal;
+  color: var(--pink-600);
+}
+
+.article-content p {
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.article-content blockquote {
+  border-left: 3px solid var(--pink-300);
+  padding: 0.5rem 1.2rem;
+  margin: 1.5rem 0;
+  color: var(--text-secondary);
+  background: var(--pink-50);
+  border-radius: 0 4px 4px 0;
+}
+
+.article-content code {
+  background: var(--pink-100);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.article-content ul, .article-content ol {
+  margin: 1rem 0 1.2rem 1.5rem;
+  color: var(--text-secondary);
+}
+
+.article-content li {
+  margin-bottom: 0.4rem;
+}
+
+.article-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+  border-top: 1px solid var(--pink-200);
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  font-size: 0.9rem;
+}
+
+/* 关于页 */
+.about-header {
+  text-align: center;
+  padding: 3rem 0 2rem;
+}
+
+.about-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--pink-200);
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: var(--pink-500);
+}
+
+.about-header h1 {
+  font-size: 1.8rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+
+.about-header p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.about-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-section {
+  margin-bottom: 2.5rem;
+}
+
+.about-section h2 {
+  font-size: 1.15rem;
+  color: var(--pink-500);
+  margin-bottom: 0.8rem;
+  font-weight: normal;
+}
+
+.about-section p {
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+  margin-bottom: 0.6rem;
+}
+
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 14px;
+  background: var(--pink-100);
+  color: var(--pink-600);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+}
+
+/* 页脚 */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-light);
+  font-size: 0.85rem;
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  border-top: 1px solid var(--pink-200);
+  margin-top: 2rem;
+}
+
+.footer a {
+  color: var(--text-light);
+}
+
+.footer a:hover {
+  color: var(--pink-400);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+/* 响应式 */
+@media (max-width: 640px) {
+  .navbar-inner {
+    flex-direction: column;
+    height: auto;
+    padding: 0.8rem 0;
+    gap: 0.5rem;
+  }
+
+  .navbar-links {
+    gap: 1.2rem;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .container {
+    padding: 1.2rem;
+  }
+
+  .article-nav {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}

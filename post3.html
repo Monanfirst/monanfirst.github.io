@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用 CSS 画一朵花 - 墨南的博客</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand">墨南</a>
+      <ul class="navbar-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="posts.html">文章</a></li>
+        <li><a href="about.html">关于</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="article-header">
+      <h1>用 CSS 画一朵花</h1>
+      <div class="post-meta">2026 年 3 月 15 日 · 技术</div>
+    </div>
+
+    <div class="article-content">
+      <p>不依赖图片，纯用 CSS 实现一朵简单的花。花瓣用 <code>border-radius</code> 弯出弧度，渐变上色，旋转排列。</p>
+
+      <h2>思路</h2>
+
+      <p>核心思路很简单：一个圆形作为花蕊，五个椭圆作为花瓣，每个花瓣旋转 72 度，就形成了一朵五瓣花。</p>
+
+      <h2>花瓣</h2>
+
+      <p>每个花瓣是一个 <code>div</code>，通过 <code>border-radius: 50%</code> 变成椭圆，加上径向渐变从粉到白：</p>
+
+      <ul>
+        <li>宽 40px，高 80px</li>
+        <li><code>border-radius: 50%</code></li>
+        <li>渐变从 <code>#f4a9b8</code> 到 <code>#fff</code></li>
+        <li>定位到底部中心，绕底部中心旋转</li>
+      </ul>
+
+      <h2>花蕊</h2>
+
+      <p>一个 30px 的圆，黄色渐变，定位在花的正中央。加一点 <code>box-shadow</code> 让它看起来更有质感。</p>
+
+      <h2>茎和叶子</h2>
+
+      <p>茎是一条细长的绿色矩形，加一点 <code>border-radius</code> 让边缘柔和。叶子用另一个椭圆，旋转 30 度贴在茎上，渐变从深绿到浅绿。</p>
+
+      <blockquote>纯 CSS 作画本质上就是用几何形状的组合与变换来拼凑画面。限制反而带来创意。</blockquote>
+
+      <h2>最终效果</h2>
+
+      <p>一朵粉色的五瓣花，绿色的茎和叶子，漂浮在白色背景上。很简单，但做完的那一刻还挺开心的。就像小时候用蜡笔画了一朵花，然后贴在冰箱上。</p>
+
+      <p>完整代码可以在我的 <a href="https://github.com/monanfirst" target="_blank">GitHub</a> 找到。</p>
+
+      <div class="article-nav">
+        <a href="post2.html">← 上一篇：关于写作这件事</a>
+        <a href="post4.html">下一篇：读《夜晚的潜水艇》 →</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="https://github.com/monanfirst" target="_blank">GitHub</a>
+      <a href="mailto:monanfirst@qq.com">邮箱</a>
+    </div>
+    <p>© 2026 墨南 · 用心写字，安静生活</p>
+  </footer>
+</body>
+</html>
