@@ -207,6 +207,7 @@ a:hover {
 
 /* 文章卡片 */
 .section-title {
+  font-family: 'DingTalk', 'Georgia', 'Noto Serif SC', serif;
   font-size: 1.1rem;
   color: var(--text-light);
   font-family: -apple-system, 'Segoe UI', sans-serif;
@@ -370,6 +371,7 @@ a:hover {
 }
 
 .about-section h2 {
+  font-family: 'DingTalk', 'Georgia', 'Noto Serif SC', serif;
   font-size: 1.15rem;
   color: var(--pink-500);
   margin-bottom: 0.8rem;
