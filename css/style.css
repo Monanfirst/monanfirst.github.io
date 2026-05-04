@@ -36,7 +36,7 @@
 .dark-mode {
   --pink-50: #111111;
   --pink-100: #1a1a1a;
-  --pink-200: #ffffff;
+  --pink-200: #2a2a2a;
   --pink-300: #c27e8e;
   --pink-400: #e08a9c;
   --pink-500: #f09dae;
@@ -46,9 +46,9 @@
   --text-light: #ffffff;
   --bg-main: #000000;
   --bg-card: #111111;
-  --border-color: #ffffff;
+  --border-color: #2a2a2a;
   --bg-code: #1a1a1a;
-  --shadow-card: rgba(255, 255, 255, 0.05);
+  --shadow-card: rgba(0, 0, 0, 0.3);
 }
 
 body {
