@@ -1,3 +1,12 @@
+/* 自定义字体 */
+@font-face {
+  font-family: 'DingTalk';
+  src: url('../zt/dingdingjinbuti.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* 基础重置 */
 * {
   margin: 0;
@@ -59,8 +68,8 @@ a:hover {
 }
 
 .navbar-brand {
+  font-family: 'DingTalk', 'Georgia', 'Noto Serif SC', serif;
   font-size: 1.3rem;
-  font-weight: bold;
   color: var(--text-primary);
   letter-spacing: 0.02em;
   display: flex;
@@ -127,6 +136,7 @@ a:hover {
 }
 
 .hero h1 {
+  font-family: 'DingTalk', 'Georgia', 'Noto Serif SC', serif;
   font-size: 2.2rem;
   color: var(--text-primary);
   margin-bottom: 1rem;
@@ -182,6 +192,7 @@ a:hover {
 }
 
 .post-card h3 {
+  font-family: 'DingTalk', 'Georgia', 'Noto Serif SC', serif;
   font-size: 1.15rem;
   margin-bottom: 0.4rem;
 }
@@ -222,6 +233,7 @@ a:hover {
 }
 
 .article-header h1 {
+  font-family: 'DingTalk', 'Georgia', 'Noto Serif SC', serif;
   font-size: 1.9rem;
   font-weight: normal;
   margin-bottom: 0.6rem;
@@ -234,6 +246,7 @@ a:hover {
 }
 
 .article-content h2 {
+  font-family: 'DingTalk', 'Georgia', 'Noto Serif SC', serif;
   font-size: 1.35rem;
   margin: 2rem 0 0.8rem;
   font-weight: normal;
@@ -296,6 +309,7 @@ a:hover {
 }
 
 .about-header h1 {
+  font-family: 'DingTalk', 'Georgia', 'Noto Serif SC', serif;
   font-size: 1.8rem;
   font-weight: normal;
   margin-bottom: 0.5rem;
