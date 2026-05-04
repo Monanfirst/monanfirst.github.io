@@ -26,8 +26,7 @@
   const el = document.getElementById('siteDays');
   if (!el) return;
 
-  // 网站上线日期（2026 年 5 月 4 日）
-  const startDate = new Date('2026-05-04');
+  const startDate = new Date('2026-05-03');
   const now = new Date();
   const diff = Math.floor((now - startDate) / (1000 * 60 * 60 * 24));
   el.textContent = '本站已勉强运行 ' + diff + ' 天';
